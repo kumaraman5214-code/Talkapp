@@ -1,0 +1,87 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.header {
+  background-color: #075E54;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header .status {
+  margin-left: 10px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.message-bubble.sent {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.message-bubble.received {
+  background-color: #ffffff;
+  align-self: flex-start;
+}
+
+.message-bubble .read-receipt {
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.input-area button {
+  background-color: #075E54;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background-color: #128C7E;
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
